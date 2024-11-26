@@ -1,0 +1,84 @@
+{
+  "policy": {
+    "name": "old-ec2-instances",
+    "resource": "ec2",
+    "comment": "Report running instances older than 60 days\n",
+    "filters": [
+      {
+        "State.Name": "running"
+      },
+      {
+        "tag:Name": "present"
+      },
+      {
+        "type": "instance-age",
+        "op": "lt",
+        "days": 1
+      }
+    ]
+  },
+  "version": "0.9.41",
+  "execution": {
+    "id": "2fca55ac-c09f-4671-b9a8-43b3df38883a",
+    "start": 1732621833.5187151,
+    "end_time": 1732621835.8271701,
+    "duration": 2.308454990386963
+  },
+  "config": {
+    "region": "us-west-2",
+    "regions": [
+      "us-west-2"
+    ],
+    "cache": "~/.cache/cloud-custodian.cache",
+    "profile": null,
+    "account_id": "971422712704",
+    "assume_role": null,
+    "session_policy": null,
+    "external_id": null,
+    "log_group": null,
+    "tracer": null,
+    "metrics_enabled": null,
+    "metrics": null,
+    "output_dir": "/home/saurabh/Desktop/Workspace/runwhen/aws-c7n-codecollection/codebundles/aws-c7n-ec2-health/custodian-output",
+    "cache_period": 0,
+    "dryrun": false,
+    "authorization_file": null,
+    "subparser": "run",
+    "config": null,
+    "configs": [
+      "old-ec2-instances.yaml"
+    ],
+    "policy_filters": [],
+    "resource_types": [],
+    "verbose": null,
+    "quiet": null,
+    "debug": false,
+    "skip_validation": false,
+    "command": "c7n.commands.run",
+    "vars": null
+  },
+  "sys-stats": {},
+  "api-stats": {
+    "ec2.DescribeInstances": 1
+  },
+  "metrics": [
+    {
+      "MetricName": "ResourceCount",
+      "Timestamp": "2024-11-26T17:20:35.826431",
+      "Value": 1,
+      "Unit": "Count"
+    },
+    {
+      "MetricName": "ResourceTime",
+      "Timestamp": "2024-11-26T17:20:35.826442",
+      "Value": 2.297205924987793,
+      "Unit": "Seconds"
+    },
+    {
+      "MetricName": "ActionTime",
+      "Timestamp": "2024-11-26T17:20:35.827143",
+      "Value": 7.62939453125e-06,
+      "Unit": "Seconds"
+    }
+  ]
+}

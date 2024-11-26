@@ -1,0 +1,38 @@
+2024-11-26 15:58:59,091 - custodian.policy - INFO - policy:old-ec2-instances resource:ec2 region:us-west-2 count:0 time:1.97
+2024-11-26 16:49:03,831 - custodian.policy - INFO - policy:old-ec2-instances resource:ec2 region:us-west-2 count:1 time:1.86
+2024-11-26 16:49:52,817 - custodian.output - ERROR - Error while executing policy
+Traceback (most recent call last):
+  File "/home/saurabh/.local/lib/python3.10/site-packages/c7n/policy.py", line 330, in run
+    resources = self.policy.resource_manager.resources()
+  File "/home/saurabh/.local/lib/python3.10/site-packages/c7n/query.py", line 549, in resources
+    resources = self.filter_resources(resources)
+  File "/home/saurabh/.local/lib/python3.10/site-packages/c7n/manager.py", line 113, in filter_resources
+    resources = f.process(resources, event)
+  File "/home/saurabh/.local/lib/python3.10/site-packages/c7n/filters/core.py", line 600, in process
+    return super(ValueFilter, self).process(resources, event)
+  File "/home/saurabh/.local/lib/python3.10/site-packages/c7n/filters/core.py", line 205, in process
+    return list(filter(self, resources))
+  File "/home/saurabh/.local/lib/python3.10/site-packages/c7n/filters/core.py", line 587, in __call__
+    matched = self.match(i)
+  File "/home/saurabh/.local/lib/python3.10/site-packages/c7n/filters/core.py", line 651, in match
+    r = self.get_resource_value(self.k, i)
+  File "/home/saurabh/.local/lib/python3.10/site-packages/c7n/filters/core.py", line 603, in get_resource_value
+    return super(ValueFilter, self).get_resource_value(k, i, self.data.get('value_regex'))
+  File "/home/saurabh/.local/lib/python3.10/site-packages/c7n/filters/core.py", line 265, in get_resource_value
+    self.expr[k] = jmespath_compile(k)
+  File "/home/saurabh/.local/lib/python3.10/site-packages/c7n/utils.py", line 1011, in jmespath_compile
+    parsed = C7NJMESPathParser().parse(expression)
+  File "/home/saurabh/.local/lib/python3.10/site-packages/c7n/utils.py", line 971, in parse
+    result = super().parse(expression)
+  File "/home/saurabh/.local/lib/python3.10/site-packages/jmespath/parser.py", line 88, in parse
+    parsed_result = self._do_parse(expression)
+  File "/home/saurabh/.local/lib/python3.10/site-packages/jmespath/parser.py", line 96, in _do_parse
+    return self._parse(expression)
+  File "/home/saurabh/.local/lib/python3.10/site-packages/jmespath/parser.py", line 114, in _parse
+    raise exceptions.ParseError(t['start'], t['value'], t['type'],
+jmespath.exceptions.ParseError: Unexpected token: :: Parse error at column 3, token ":" (COLON), for expression:
+"Tag:Name"
+    ^
+2024-11-26 16:51:01,509 - custodian.policy - INFO - policy:old-ec2-instances resource:ec2 region:us-west-2 count:0 time:1.71
+2024-11-26 17:20:25,792 - custodian.policy - INFO - policy:old-ec2-instances resource:ec2 region:us-west-2 count:0 time:2.25
+2024-11-26 17:20:35,825 - custodian.policy - INFO - policy:old-ec2-instances resource:ec2 region:us-west-2 count:1 time:2.30

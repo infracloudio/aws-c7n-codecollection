@@ -1,0 +1,135 @@
+[
+  {
+    "AmiLaunchIndex": 0,
+    "ImageId": "ami-0caf77f9b87412c51",
+    "InstanceId": "i-0e461b109ee9acec9",
+    "InstanceType": "t2.micro",
+    "KeyName": "my-ec2-key",
+    "LaunchTime": "2024-11-26T11:07:00+00:00",
+    "Monitoring": {
+      "State": "disabled"
+    },
+    "Placement": {
+      "AvailabilityZone": "us-west-2c",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "PrivateDnsName": "ip-172-31-92-119.us-west-2.compute.internal",
+    "PrivateIpAddress": "172.31.92.119",
+    "ProductCodes": [],
+    "PublicDnsName": "",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "StateTransitionReason": "",
+    "SubnetId": "subnet-04c3d224e285cec3b",
+    "VpcId": "vpc-08ec327fcbd46ffea",
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/xvda",
+        "Ebs": {
+          "AttachTime": "2024-11-26T11:07:01+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-08a1bef4c0e6c0b05"
+        }
+      }
+    ],
+    "ClientToken": "terraform-20241126110659522800000001",
+    "EbsOptimized": false,
+    "EnaSupport": true,
+    "Hypervisor": "xen",
+    "NetworkInterfaces": [
+      {
+        "Attachment": {
+          "AttachTime": "2024-11-26T11:07:00+00:00",
+          "AttachmentId": "eni-attach-0351b9db0b495672d",
+          "DeleteOnTermination": true,
+          "DeviceIndex": 0,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "",
+        "Groups": [
+          {
+            "GroupName": "test-instance-sg",
+            "GroupId": "sg-03ec5ef97dc9e6a40"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "0a:a9:56:79:4e:11",
+        "NetworkInterfaceId": "eni-08b8f7197cfe26123",
+        "OwnerId": "971422712704",
+        "PrivateDnsName": "ip-172-31-92-119.us-west-2.compute.internal",
+        "PrivateIpAddress": "172.31.92.119",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-172-31-92-119.us-west-2.compute.internal",
+            "PrivateIpAddress": "172.31.92.119"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-04c3d224e285cec3b",
+        "VpcId": "vpc-08ec327fcbd46ffea",
+        "InterfaceType": "interface"
+      }
+    ],
+    "RootDeviceName": "/dev/xvda",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+      {
+        "GroupName": "test-instance-sg",
+        "GroupId": "sg-03ec5ef97dc9e6a40"
+      }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+      {
+        "Key": "Name",
+        "Value": "TestInstance"
+      }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+      "CoreCount": 1,
+      "ThreadsPerCore": 1
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "optional",
+      "HttpPutResponseHopLimit": 1,
+      "HttpEndpoint": "enabled",
+      "HttpProtocolIpv6": "disabled",
+      "InstanceMetadataTags": "disabled"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    },
+    "PlatformDetails": "Linux/UNIX",
+    "UsageOperation": "RunInstances",
+    "UsageOperationUpdateTime": "2024-11-26T11:07:00+00:00",
+    "PrivateDnsNameOptions": {
+      "HostnameType": "ip-name",
+      "EnableResourceNameDnsARecord": false,
+      "EnableResourceNameDnsAAAARecord": false
+    },
+    "MaintenanceOptions": {
+      "AutoRecovery": "default"
+    },
+    "CurrentInstanceBootMode": "legacy-bios",
+    "c7n:MatchedFilters": [
+      "State.Name",
+      "tag:Name"
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+policies:
+  - name: old-ec2-instances
+    resource: ec2
+    comment: |
+      Report running instances older than 60 days
+    filters:
+      - "State.Name": running
+      - "tag:Name": "present"
+      - type: instance-age
+        op: lt
+        days: 1
