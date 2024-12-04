@@ -1,0 +1,7 @@
+2024-12-04 16:29:01,258 - custodian.policy - INFO - policy:s3-tag-compliance resource:s3 region:us-west-2 count:0 time:6.79
+2024-12-04 17:30:15,346 - custodian.policy - INFO - policy:s3-tag-compliance resource:s3 region:us-west-2 count:1 time:6.38
+2024-12-04 17:33:28,845 - custodian.policy - INFO - policy:s3-tag-compliance resource:s3 region:us-west-2 count:1 time:6.44
+2024-12-04 17:39:07,583 - custodian.policy - INFO - policy:s3-tag-compliance resource:s3 region:us-west-2 count:1 time:7.98
+2024-12-04 17:40:41,584 - custodian.policy - INFO - policy:s3-tag-compliance resource:s3 region:us-west-2 count:1 time:6.35
+2024-12-04 17:46:08,679 - custodian.policy - INFO - policy:s3-tag-compliance resource:s3 region:us-west-2 count:1 time:5.87
+2024-12-04 17:48:08,151 - custodian.policy - INFO - policy:s3-tag-compliance resource:s3 region:us-west-2 count:1 time:6.23

@@ -1,0 +1,632 @@
+[
+  {
+    "Path": "/aws-service-role/support.amazonaws.com/",
+    "RoleName": "AWSServiceRoleForSupport",
+    "RoleId": "AROA6ELKOIOAJYJH2UNJS",
+    "Arn": "arn:aws:iam::971422712704:role/aws-service-role/support.amazonaws.com/AWSServiceRoleForSupport",
+    "CreateDate": "2024-11-13T09:43:37+00:00",
+    "AssumeRolePolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "Service": "support.amazonaws.com"
+          },
+          "Action": "sts:AssumeRole"
+        }
+      ]
+    },
+    "Description": "Enables resource access for AWS to provide billing, administrative and support services",
+    "MaxSessionDuration": 3600,
+    "RoleLastUsed": {},
+    "c7n:MatchedFilters": [
+      "tag:Name",
+      "tag:Environment",
+      "tag:Owner"
+    ]
+  },
+  {
+    "Path": "/aws-reserved/sso.amazonaws.com/ap-south-1/",
+    "RoleName": "AWSReservedSSO_AWSOrganizationsFullAccess_aede19a7bc7ceeb5",
+    "RoleId": "AROA6ELKOIOAAOYSRFXTU",
+    "Arn": "arn:aws:iam::971422712704:role/aws-reserved/sso.amazonaws.com/ap-south-1/AWSReservedSSO_AWSOrganizationsFullAccess_aede19a7bc7ceeb5",
+    "CreateDate": "2024-11-13T09:44:36+00:00",
+    "AssumeRolePolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "Federated": "arn:aws:iam::971422712704:saml-provider/AWSSSO_d364ee6698fdef2b_DO_NOT_DELETE"
+          },
+          "Action": [
+            "sts:AssumeRoleWithSAML",
+            "sts:TagSession"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "SAML:aud": "https://signin.aws.amazon.com/saml"
+            }
+          }
+        }
+      ]
+    },
+    "Description": "Provides full access to AWS Organizations",
+    "MaxSessionDuration": 43200,
+    "RoleLastUsed": {},
+    "c7n:MatchedFilters": [
+      "tag:Name",
+      "tag:Environment",
+      "tag:Owner"
+    ]
+  },
+  {
+    "Path": "/aws-service-role/cloudtrail.amazonaws.com/",
+    "RoleName": "AWSServiceRoleForCloudTrail",
+    "RoleId": "AROA6ELKOIOAFVGHP5VDW",
+    "Arn": "arn:aws:iam::971422712704:role/aws-service-role/cloudtrail.amazonaws.com/AWSServiceRoleForCloudTrail",
+    "CreateDate": "2024-11-13T09:46:40+00:00",
+    "AssumeRolePolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "Service": "cloudtrail.amazonaws.com"
+          },
+          "Action": "sts:AssumeRole"
+        }
+      ]
+    },
+    "MaxSessionDuration": 3600,
+    "RoleLastUsed": {
+      "LastUsedDate": "2024-11-13T09:46:51+00:00",
+      "Region": "us-east-1"
+    },
+    "c7n:MatchedFilters": [
+      "tag:Name",
+      "tag:Environment",
+      "tag:Owner"
+    ]
+  },
+  {
+    "Path": "/",
+    "RoleName": "aws-controltower-ForwardSnsNotificationRole",
+    "RoleId": "AROA6ELKOIOAMDAW4MTFG",
+    "Arn": "arn:aws:iam::971422712704:role/aws-controltower-ForwardSnsNotificationRole",
+    "CreateDate": "2024-11-13T09:45:51+00:00",
+    "AssumeRolePolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "Service": "lambda.amazonaws.com"
+          },
+          "Action": "sts:AssumeRole"
+        }
+      ]
+    },
+    "Description": "",
+    "MaxSessionDuration": 3600,
+    "RoleLastUsed": {
+      "LastUsedDate": "2024-12-04T10:56:45+00:00",
+      "Region": "us-west-2"
+    },
+    "c7n:MatchedFilters": [
+      "tag:Name",
+      "tag:Environment",
+      "tag:Owner"
+    ]
+  },
+  {
+    "Path": "/",
+    "RoleName": "AWSControlTowerExecution",
+    "RoleId": "AROA6ELKOIOAFV4VOWA5I",
+    "Arn": "arn:aws:iam::971422712704:role/AWSControlTowerExecution",
+    "CreateDate": "2024-11-13T09:43:37+00:00",
+    "AssumeRolePolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "AWS": "arn:aws:iam::293695346124:root"
+          },
+          "Action": "sts:AssumeRole"
+        }
+      ]
+    },
+    "MaxSessionDuration": 3600,
+    "RoleLastUsed": {
+      "LastUsedDate": "2024-11-13T09:53:55+00:00",
+      "Region": "us-west-2"
+    },
+    "c7n:MatchedFilters": [
+      "tag:Name",
+      "tag:Environment",
+      "tag:Owner"
+    ]
+  },
+  {
+    "Path": "/aws-service-role/controltower.amazonaws.com/",
+    "RoleName": "AWSServiceRoleForAWSControlTower",
+    "RoleId": "AROA6ELKOIOAKTPDXV2IB",
+    "Arn": "arn:aws:iam::971422712704:role/aws-service-role/controltower.amazonaws.com/AWSServiceRoleForAWSControlTower",
+    "CreateDate": "2024-11-13T09:45:50+00:00",
+    "AssumeRolePolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "Service": "controltower.amazonaws.com"
+          },
+          "Action": "sts:AssumeRole"
+        }
+      ]
+    },
+    "Description": "Provides access to AWS Resources managed or used by AWS Control Tower",
+    "MaxSessionDuration": 3600,
+    "RoleLastUsed": {
+      "LastUsedDate": "2024-11-13T09:49:18+00:00",
+      "Region": "us-west-2"
+    },
+    "c7n:MatchedFilters": [
+      "tag:Name",
+      "tag:Environment",
+      "tag:Owner"
+    ]
+  },
+  {
+    "Path": "/",
+    "RoleName": "aws-controltower-AdministratorExecutionRole",
+    "RoleId": "AROA6ELKOIOAJJBIQKMBS",
+    "Arn": "arn:aws:iam::971422712704:role/aws-controltower-AdministratorExecutionRole",
+    "CreateDate": "2024-11-13T09:45:51+00:00",
+    "AssumeRolePolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "AWS": "arn:aws:iam::382697962486:role/aws-controltower-AuditAdministratorRole"
+          },
+          "Action": "sts:AssumeRole"
+        }
+      ]
+    },
+    "Description": "",
+    "MaxSessionDuration": 3600,
+    "RoleLastUsed": {},
+    "c7n:MatchedFilters": [
+      "tag:Name",
+      "tag:Environment",
+      "tag:Owner"
+    ]
+  },
+  {
+    "Path": "/aws-reserved/sso.amazonaws.com/ap-south-1/",
+    "RoleName": "AWSReservedSSO_AWSAdministratorAccess_08f6c8a82cbf2234",
+    "RoleId": "AROA6ELKOIOAPQ735NR3T",
+    "Arn": "arn:aws:iam::971422712704:role/aws-reserved/sso.amazonaws.com/ap-south-1/AWSReservedSSO_AWSAdministratorAccess_08f6c8a82cbf2234",
+    "CreateDate": "2024-11-13T09:44:41+00:00",
+    "AssumeRolePolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "Federated": "arn:aws:iam::971422712704:saml-provider/AWSSSO_d364ee6698fdef2b_DO_NOT_DELETE"
+          },
+          "Action": [
+            "sts:AssumeRoleWithSAML",
+            "sts:TagSession"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "SAML:aud": "https://signin.aws.amazon.com/saml"
+            }
+          }
+        }
+      ]
+    },
+    "Description": "Provides full access to AWS services and resources",
+    "MaxSessionDuration": 43200,
+    "RoleLastUsed": {
+      "LastUsedDate": "2024-11-13T09:48:46+00:00",
+      "Region": "ap-south-1"
+    },
+    "c7n:MatchedFilters": [
+      "tag:Name",
+      "tag:Environment",
+      "tag:Owner"
+    ]
+  },
+  {
+    "Path": "/aws-service-role/trustedadvisor.amazonaws.com/",
+    "RoleName": "AWSServiceRoleForTrustedAdvisor",
+    "RoleId": "AROA6ELKOIOAFIIAWEZM3",
+    "Arn": "arn:aws:iam::971422712704:role/aws-service-role/trustedadvisor.amazonaws.com/AWSServiceRoleForTrustedAdvisor",
+    "CreateDate": "2024-11-13T09:43:37+00:00",
+    "AssumeRolePolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "Service": "trustedadvisor.amazonaws.com"
+          },
+          "Action": "sts:AssumeRole"
+        }
+      ]
+    },
+    "Description": "Access for the AWS Trusted Advisor Service to help reduce cost, increase performance, and improve security of your AWS environment.",
+    "MaxSessionDuration": 3600,
+    "RoleLastUsed": {},
+    "c7n:MatchedFilters": [
+      "tag:Name",
+      "tag:Environment",
+      "tag:Owner"
+    ]
+  },
+  {
+    "Path": "/aws-service-role/access-analyzer.amazonaws.com/",
+    "RoleName": "AWSServiceRoleForAccessAnalyzer",
+    "RoleId": "AROA6ELKOIOADPZWB5LCB",
+    "Arn": "arn:aws:iam::971422712704:role/aws-service-role/access-analyzer.amazonaws.com/AWSServiceRoleForAccessAnalyzer",
+    "CreateDate": "2024-11-13T09:44:00+00:00",
+    "AssumeRolePolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "Service": "access-analyzer.amazonaws.com"
+          },
+          "Action": "sts:AssumeRole"
+        }
+      ]
+    },
+    "MaxSessionDuration": 3600,
+    "RoleLastUsed": {
+      "LastUsedDate": "2024-12-04T09:56:42+00:00",
+      "Region": "us-west-2"
+    },
+    "c7n:MatchedFilters": [
+      "tag:Name",
+      "tag:Environment",
+      "tag:Owner"
+    ]
+  },
+  {
+    "Path": "/",
+    "RoleName": "aws-controltower-ConfigRecorderRole",
+    "RoleId": "AROA6ELKOIOABWR3EMUMF",
+    "Arn": "arn:aws:iam::971422712704:role/aws-controltower-ConfigRecorderRole",
+    "CreateDate": "2024-11-13T09:45:51+00:00",
+    "AssumeRolePolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "Service": "config.amazonaws.com"
+          },
+          "Action": "sts:AssumeRole"
+        }
+      ]
+    },
+    "Description": "",
+    "MaxSessionDuration": 3600,
+    "RoleLastUsed": {},
+    "c7n:MatchedFilters": [
+      "tag:Name",
+      "tag:Environment",
+      "tag:Owner"
+    ]
+  },
+  {
+    "Path": "/aws-reserved/sso.amazonaws.com/ap-south-1/",
+    "RoleName": "AWSReservedSSO_AWSPowerUserAccess_8167469fdcd0e084",
+    "RoleId": "AROA6ELKOIOAASBLNPWLK",
+    "Arn": "arn:aws:iam::971422712704:role/aws-reserved/sso.amazonaws.com/ap-south-1/AWSReservedSSO_AWSPowerUserAccess_8167469fdcd0e084",
+    "CreateDate": "2024-11-13T09:44:38+00:00",
+    "AssumeRolePolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "Federated": "arn:aws:iam::971422712704:saml-provider/AWSSSO_d364ee6698fdef2b_DO_NOT_DELETE"
+          },
+          "Action": [
+            "sts:AssumeRoleWithSAML",
+            "sts:TagSession"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "SAML:aud": "https://signin.aws.amazon.com/saml"
+            }
+          }
+        }
+      ]
+    },
+    "Description": "Provides full access to AWS services and resources, but does not allow management of Users and groups",
+    "MaxSessionDuration": 43200,
+    "RoleLastUsed": {
+      "LastUsedDate": "2024-12-04T12:06:14+00:00",
+      "Region": "ap-south-1"
+    },
+    "c7n:MatchedFilters": [
+      "tag:Name",
+      "tag:Environment",
+      "tag:Owner"
+    ]
+  },
+  {
+    "Path": "/aws-service-role/sso.amazonaws.com/",
+    "RoleName": "AWSServiceRoleForSSO",
+    "RoleId": "AROA6ELKOIOAA5FIHMRVS",
+    "Arn": "arn:aws:iam::971422712704:role/aws-service-role/sso.amazonaws.com/AWSServiceRoleForSSO",
+    "CreateDate": "2024-11-13T09:43:48+00:00",
+    "AssumeRolePolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "Service": "sso.amazonaws.com"
+          },
+          "Action": "sts:AssumeRole"
+        }
+      ]
+    },
+    "Description": "Service-linked role used by AWS SSO to manage AWS resources, including IAM roles, policies and SAML IdP on your behalf.",
+    "MaxSessionDuration": 3600,
+    "RoleLastUsed": {
+      "LastUsedDate": "2024-11-14T04:02:27+00:00",
+      "Region": "us-east-1"
+    },
+    "c7n:MatchedFilters": [
+      "tag:Name",
+      "tag:Environment",
+      "tag:Owner"
+    ]
+  },
+  {
+    "Path": "/",
+    "RoleName": "AWSControlTower_VPCFlowLogsRole",
+    "RoleId": "AROA6ELKOIOAILQ5SBETV",
+    "Arn": "arn:aws:iam::971422712704:role/AWSControlTower_VPCFlowLogsRole",
+    "CreateDate": "2024-11-13T09:49:38+00:00",
+    "AssumeRolePolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "Service": "vpc-flow-logs.amazonaws.com"
+          },
+          "Action": "sts:AssumeRole"
+        }
+      ]
+    },
+    "MaxSessionDuration": 3600,
+    "RoleLastUsed": {
+      "LastUsedDate": "2024-12-02T17:45:18+00:00",
+      "Region": "us-west-2"
+    },
+    "c7n:MatchedFilters": [
+      "tag:Name",
+      "tag:Environment",
+      "tag:Owner"
+    ]
+  },
+  {
+    "Path": "/aws-service-role/guardduty.amazonaws.com/",
+    "RoleName": "AWSServiceRoleForAmazonGuardDuty",
+    "RoleId": "AROA6ELKOIOALKNAFPFU7",
+    "Arn": "arn:aws:iam::971422712704:role/aws-service-role/guardduty.amazonaws.com/AWSServiceRoleForAmazonGuardDuty",
+    "CreateDate": "2024-11-13T09:45:40+00:00",
+    "AssumeRolePolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "Service": "guardduty.amazonaws.com"
+          },
+          "Action": "sts:AssumeRole"
+        }
+      ]
+    },
+    "MaxSessionDuration": 3600,
+    "RoleLastUsed": {
+      "LastUsedDate": "2024-11-13T09:48:02+00:00",
+      "Region": "ap-south-1"
+    },
+    "c7n:MatchedFilters": [
+      "tag:Name",
+      "tag:Environment",
+      "tag:Owner"
+    ]
+  },
+  {
+    "Path": "/aws-service-role/config.amazonaws.com/",
+    "RoleName": "AWSServiceRoleForConfig",
+    "RoleId": "AROA6ELKOIOAGPDSM5Q2D",
+    "Arn": "arn:aws:iam::971422712704:role/aws-service-role/config.amazonaws.com/AWSServiceRoleForConfig",
+    "CreateDate": "2024-11-13T09:45:30+00:00",
+    "AssumeRolePolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "Service": "config.amazonaws.com"
+          },
+          "Action": "sts:AssumeRole"
+        }
+      ]
+    },
+    "MaxSessionDuration": 3600,
+    "RoleLastUsed": {
+      "LastUsedDate": "2024-12-04T12:05:54+00:00",
+      "Region": "ap-south-1"
+    },
+    "c7n:MatchedFilters": [
+      "tag:Name",
+      "tag:Environment",
+      "tag:Owner"
+    ]
+  },
+  {
+    "Path": "/",
+    "RoleName": "aws-controltower-ReadOnlyExecutionRole",
+    "RoleId": "AROA6ELKOIOAA3F6VE6GX",
+    "Arn": "arn:aws:iam::971422712704:role/aws-controltower-ReadOnlyExecutionRole",
+    "CreateDate": "2024-11-13T09:45:51+00:00",
+    "AssumeRolePolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "AWS": "arn:aws:iam::382697962486:role/aws-controltower-AuditReadOnlyRole"
+          },
+          "Action": "sts:AssumeRole"
+        }
+      ]
+    },
+    "Description": "",
+    "MaxSessionDuration": 3600,
+    "RoleLastUsed": {},
+    "c7n:MatchedFilters": [
+      "tag:Name",
+      "tag:Environment",
+      "tag:Owner"
+    ]
+  },
+  {
+    "Path": "/aws-service-role/securityhub.amazonaws.com/",
+    "RoleName": "AWSServiceRoleForSecurityHub",
+    "RoleId": "AROA6ELKOIOAP24SK7AHD",
+    "Arn": "arn:aws:iam::971422712704:role/aws-service-role/securityhub.amazonaws.com/AWSServiceRoleForSecurityHub",
+    "CreateDate": "2024-11-13T09:45:40+00:00",
+    "AssumeRolePolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "Service": "securityhub.amazonaws.com"
+          },
+          "Action": "sts:AssumeRole"
+        }
+      ]
+    },
+    "MaxSessionDuration": 3600,
+    "RoleLastUsed": {
+      "LastUsedDate": "2024-12-04T12:06:47+00:00",
+      "Region": "ap-south-1"
+    },
+    "c7n:MatchedFilters": [
+      "tag:Name",
+      "tag:Environment",
+      "tag:Owner"
+    ]
+  },
+  {
+    "Path": "/aws-reserved/sso.amazonaws.com/ap-south-1/",
+    "RoleName": "AWSReservedSSO_AWSReadOnlyAccess_962702d292112940",
+    "RoleId": "AROA6ELKOIOABVRFXAMV6",
+    "Arn": "arn:aws:iam::971422712704:role/aws-reserved/sso.amazonaws.com/ap-south-1/AWSReservedSSO_AWSReadOnlyAccess_962702d292112940",
+    "CreateDate": "2024-11-13T09:44:40+00:00",
+    "AssumeRolePolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "Federated": "arn:aws:iam::971422712704:saml-provider/AWSSSO_d364ee6698fdef2b_DO_NOT_DELETE"
+          },
+          "Action": [
+            "sts:AssumeRoleWithSAML",
+            "sts:TagSession"
+          ],
+          "Condition": {
+            "StringEquals": {
+              "SAML:aud": "https://signin.aws.amazon.com/saml"
+            }
+          }
+        }
+      ]
+    },
+    "Description": "This policy grants permissions to view resources and basic metadata across all AWS services",
+    "MaxSessionDuration": 43200,
+    "RoleLastUsed": {},
+    "c7n:MatchedFilters": [
+      "tag:Name",
+      "tag:Environment",
+      "tag:Owner"
+    ]
+  },
+  {
+    "Path": "/aws-service-role/organizations.amazonaws.com/",
+    "RoleName": "AWSServiceRoleForOrganizations",
+    "RoleId": "AROA6ELKOIOAJ6CAGWJ64",
+    "Arn": "arn:aws:iam::971422712704:role/aws-service-role/organizations.amazonaws.com/AWSServiceRoleForOrganizations",
+    "CreateDate": "2024-11-13T09:43:38+00:00",
+    "AssumeRolePolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "Service": "organizations.amazonaws.com"
+          },
+          "Action": "sts:AssumeRole"
+        }
+      ]
+    },
+    "Description": "Service-linked role used by AWS Organizations to enable integration of other AWS services with Organizations.",
+    "MaxSessionDuration": 3600,
+    "RoleLastUsed": {
+      "LastUsedDate": "2024-11-13T09:46:40+00:00",
+      "Region": "us-east-1"
+    },
+    "c7n:MatchedFilters": [
+      "tag:Name",
+      "tag:Environment",
+      "tag:Owner"
+    ]
+  },
+  {
+    "Path": "/aws-service-role/malware-protection.guardduty.amazonaws.com/",
+    "RoleName": "AWSServiceRoleForAmazonGuardDutyMalwareProtection",
+    "RoleId": "AROA6ELKOIOAHBBPMZDIX",
+    "Arn": "arn:aws:iam::971422712704:role/aws-service-role/malware-protection.guardduty.amazonaws.com/AWSServiceRoleForAmazonGuardDutyMalwareProtection",
+    "CreateDate": "2024-11-13T09:47:40+00:00",
+    "AssumeRolePolicyDocument": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "Service": "malware-protection.guardduty.amazonaws.com"
+          },
+          "Action": "sts:AssumeRole"
+        }
+      ]
+    },
+    "MaxSessionDuration": 3600,
+    "RoleLastUsed": {},
+    "c7n:MatchedFilters": [
+      "tag:Name",
+      "tag:Environment",
+      "tag:Owner"
+    ]
+  }
+]

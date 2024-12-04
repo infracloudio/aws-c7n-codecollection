@@ -1,0 +1,86 @@
+{
+  "policy": {
+    "name": "iam-policy-tag-compliance",
+    "resource": "iam-policy",
+    "filters": [
+      {
+        "or": [
+          {
+            "tag:Name": "absent"
+          },
+          {
+            "tag:Environment": "absent"
+          },
+          {
+            "tag:Owner": "absent"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "0.9.41",
+  "execution": {
+    "id": "02367b92-7b71-4925-9fd8-e5b94c597824",
+    "start": 1733314692.9541206,
+    "end_time": 1733314695.934444,
+    "duration": 2.980323314666748
+  },
+  "config": {
+    "region": "us-west-2",
+    "regions": [
+      "us-west-2"
+    ],
+    "cache": "~/.cache/cloud-custodian.cache",
+    "profile": null,
+    "account_id": "971422712704",
+    "assume_role": null,
+    "session_policy": null,
+    "external_id": null,
+    "log_group": null,
+    "tracer": null,
+    "metrics_enabled": null,
+    "metrics": null,
+    "output_dir": "/home/saurabh/Desktop/Workspace/runwhen/aws-c7n-codecollection/codebundles/aws-c7n-compliance/custodian-output",
+    "cache_period": 0,
+    "dryrun": false,
+    "authorization_file": null,
+    "subparser": "run",
+    "config": null,
+    "configs": [
+      "tag-compliance.yaml"
+    ],
+    "policy_filters": [],
+    "resource_types": [],
+    "verbose": null,
+    "quiet": null,
+    "debug": false,
+    "skip_validation": false,
+    "command": "c7n.commands.run",
+    "vars": null
+  },
+  "sys-stats": {},
+  "api-stats": {
+    "iam.ListPolicies": 1,
+    "tagging.GetResources": 1
+  },
+  "metrics": [
+    {
+      "MetricName": "ResourceCount",
+      "Timestamp": "2024-12-04T17:48:15.934222",
+      "Value": 1,
+      "Unit": "Count"
+    },
+    {
+      "MetricName": "ResourceTime",
+      "Timestamp": "2024-12-04T17:48:15.934230",
+      "Value": 2.979470729827881,
+      "Unit": "Seconds"
+    },
+    {
+      "MetricName": "ActionTime",
+      "Timestamp": "2024-12-04T17:48:15.934435",
+      "Value": 3.337860107421875e-06,
+      "Unit": "Seconds"
+    }
+  ]
+}

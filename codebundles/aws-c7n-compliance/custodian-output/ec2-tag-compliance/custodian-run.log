@@ -1,0 +1,7 @@
+2024-12-04 16:29:03,001 - custodian.policy - INFO - policy:ec2-tag-compliance resource:ec2 region:us-west-2 count:0 time:1.74
+2024-12-04 17:30:08,965 - custodian.policy - INFO - policy:ec2-tag-compliance resource:ec2 region:us-west-2 count:0 time:2.06
+2024-12-04 17:33:22,400 - custodian.policy - INFO - policy:ec2-tag-compliance resource:ec2 region:us-west-2 count:0 time:2.43
+2024-12-04 17:38:59,597 - custodian.policy - INFO - policy:ec2-tag-compliance resource:ec2 region:us-west-2 count:0 time:2.48
+2024-12-04 17:40:35,235 - custodian.policy - INFO - policy:ec2-tag-compliance resource:ec2 region:us-west-2 count:0 time:2.14
+2024-12-04 17:46:02,808 - custodian.policy - INFO - policy:ec2-tag-compliance resource:ec2 region:us-west-2 count:0 time:1.90
+2024-12-04 17:48:01,918 - custodian.policy - INFO - policy:ec2-tag-compliance resource:ec2 region:us-west-2 count:0 time:1.75

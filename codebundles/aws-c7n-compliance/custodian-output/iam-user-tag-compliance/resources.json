@@ -1,0 +1,24 @@
+[
+  {
+    "Path": "/",
+    "UserName": "custodian",
+    "UserId": "AIDA6ELKOIOAEXKAITG7M",
+    "Arn": "arn:aws:iam::971422712704:user/custodian",
+    "CreateDate": "2024-11-14T08:40:00+00:00",
+    "Tags": [
+      {
+        "Key": "AKIA6ELKOIOAGJJDU4PB",
+        "Value": "custodian"
+      },
+      {
+        "Key": "AKIA6ELKOIOAFIW3FM4Y",
+        "Value": "custodian-cli"
+      }
+    ],
+    "c7n:MatchedFilters": [
+      "tag:Name",
+      "tag:Environment",
+      "tag:Owner"
+    ]
+  }
+]

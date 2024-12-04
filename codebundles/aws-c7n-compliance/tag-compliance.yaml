@@ -1,0 +1,65 @@
+policies:
+  - name: ec2-tag-compliance
+    resource: ec2
+    filters:
+      - or:
+        - "tag:Name": absent
+        - "tag:Environment": absent
+        - "tag:Owner": absent
+    
+  - name: s3-tag-compliance
+    resource: s3
+    filters:
+      - or:
+        - "tag:Name": absent
+        - "tag:Environment": absent
+        - "tag:Owner": absent
+    
+  - name: rds-tag-compliance
+    resource: rds
+    filters:
+      - or:
+        - "tag:Name": absent
+        - "tag:Environment": absent
+        - "tag:Owner": absent
+    
+  - name: vpc-tag-compliance
+    resource: vpc
+    filters:
+      - or:
+        - "tag:Name": absent
+        - "tag:Environment": absent
+        - "tag:Owner": absent
+    
+  - name: iam-group-tag-compliance
+    resource: iam-group
+    filters:
+      - or:
+        - "tag:Name": absent
+        - "tag:Environment": absent
+        - "tag:Owner": absent
+    
+  - name: iam-policy-tag-compliance
+    resource: iam-policy
+    filters:
+      - or:
+        - "tag:Name": absent
+        - "tag:Environment": absent
+        - "tag:Owner": absent
+    
+  - name: iam-role-tag-compliance
+    resource: iam-role
+    filters:
+      - or:
+        - "tag:Name": absent
+        - "tag:Environment": absent
+        - "tag:Owner": absent
+    
+  - name: iam-user-tag-compliance
+    resource: iam-user
+    filters:
+      - or:
+        - "tag:Name": absent
+        - "tag:Environment": absent
+        - "tag:Owner": absent
+    

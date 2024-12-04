@@ -1,0 +1,86 @@
+{
+  "policy": {
+    "name": "iam-user-tag-compliance",
+    "resource": "iam-user",
+    "filters": [
+      {
+        "or": [
+          {
+            "tag:Name": "absent"
+          },
+          {
+            "tag:Environment": "absent"
+          },
+          {
+            "tag:Owner": "absent"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "0.9.41",
+  "execution": {
+    "id": "4b5120df-c62d-4f9c-93e9-d3e9a8aada35",
+    "start": 1733314706.7997983,
+    "end_time": 1733314709.982246,
+    "duration": 3.182447671890259
+  },
+  "config": {
+    "region": "us-west-2",
+    "regions": [
+      "us-west-2"
+    ],
+    "cache": "~/.cache/cloud-custodian.cache",
+    "profile": null,
+    "account_id": "971422712704",
+    "assume_role": null,
+    "session_policy": null,
+    "external_id": null,
+    "log_group": null,
+    "tracer": null,
+    "metrics_enabled": null,
+    "metrics": null,
+    "output_dir": "/home/saurabh/Desktop/Workspace/runwhen/aws-c7n-codecollection/codebundles/aws-c7n-compliance/custodian-output",
+    "cache_period": 0,
+    "dryrun": false,
+    "authorization_file": null,
+    "subparser": "run",
+    "config": null,
+    "configs": [
+      "tag-compliance.yaml"
+    ],
+    "policy_filters": [],
+    "resource_types": [],
+    "verbose": null,
+    "quiet": null,
+    "debug": false,
+    "skip_validation": false,
+    "command": "c7n.commands.run",
+    "vars": null
+  },
+  "sys-stats": {},
+  "api-stats": {
+    "iam.ListUsers": 1,
+    "iam.GetUser": 1
+  },
+  "metrics": [
+    {
+      "MetricName": "ResourceCount",
+      "Timestamp": "2024-12-04T17:48:29.981618",
+      "Value": 1,
+      "Unit": "Count"
+    },
+    {
+      "MetricName": "ResourceTime",
+      "Timestamp": "2024-12-04T17:48:29.981635",
+      "Value": 3.180591344833374,
+      "Unit": "Seconds"
+    },
+    {
+      "MetricName": "ActionTime",
+      "Timestamp": "2024-12-04T17:48:29.982223",
+      "Value": 7.152557373046875e-06,
+      "Unit": "Seconds"
+    }
+  ]
+}

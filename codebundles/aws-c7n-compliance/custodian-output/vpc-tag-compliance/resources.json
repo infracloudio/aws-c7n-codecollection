@@ -1,0 +1,42 @@
+[
+  {
+    "CidrBlock": "172.31.0.0/16",
+    "DhcpOptionsId": "dopt-06bcc81c3463623b6",
+    "State": "available",
+    "VpcId": "vpc-08ec327fcbd46ffea",
+    "OwnerId": "971422712704",
+    "InstanceTenancy": "default",
+    "CidrBlockAssociationSet": [
+      {
+        "AssociationId": "vpc-cidr-assoc-042fa51c4d3951966",
+        "CidrBlock": "172.31.0.0/16",
+        "CidrBlockState": {
+          "State": "associated"
+        }
+      }
+    ],
+    "IsDefault": false,
+    "Tags": [
+      {
+        "Key": "aws:cloudformation:stack-id",
+        "Value": "arn:aws:cloudformation:us-west-2:971422712704:stack/StackSet-AWSControlTowerBP-VPC-ACCOUNT-FACTORY-V1-fee529da-baf9-4330-b081-c90d7990403b/d16a5550-a1a4-11ef-b36e-06d3cf4e053d"
+      },
+      {
+        "Key": "Name",
+        "Value": "aws-controltower-VPC"
+      },
+      {
+        "Key": "aws:cloudformation:stack-name",
+        "Value": "StackSet-AWSControlTowerBP-VPC-ACCOUNT-FACTORY-V1-fee529da-baf9-4330-b081-c90d7990403b"
+      },
+      {
+        "Key": "aws:cloudformation:logical-id",
+        "Value": "VPC"
+      }
+    ],
+    "c7n:MatchedFilters": [
+      "tag:Environment",
+      "tag:Owner"
+    ]
+  }
+]

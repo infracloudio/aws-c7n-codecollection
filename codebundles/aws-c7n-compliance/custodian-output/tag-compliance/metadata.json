@@ -1,0 +1,89 @@
+{
+  "policy": {
+    "name": "tag-compliance",
+    "resource": "s3",
+    "filters": [
+      {
+        "or": [
+          {
+            "tag:Name": "absent"
+          },
+          {
+            "tag:Environment": "absent"
+          },
+          {
+            "tag:Owner": "absent"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "0.9.41",
+  "execution": {
+    "id": "e9c75f34-3670-4962-b715-b51f07f01d0d",
+    "start": 1733309723.237591,
+    "end_time": 1733309729.5339525,
+    "duration": 6.296361446380615
+  },
+  "config": {
+    "region": "us-west-2",
+    "regions": [
+      "us-west-2"
+    ],
+    "cache": "~/.cache/cloud-custodian.cache",
+    "profile": null,
+    "account_id": "971422712704",
+    "assume_role": null,
+    "session_policy": null,
+    "external_id": null,
+    "log_group": null,
+    "tracer": null,
+    "metrics_enabled": null,
+    "metrics": null,
+    "output_dir": "/home/saurabh/Desktop/Workspace/runwhen/aws-c7n-codecollection/codebundles/aws-c7n-compliance/custodian-output",
+    "cache_period": 0,
+    "dryrun": false,
+    "authorization_file": null,
+    "subparser": "run",
+    "config": null,
+    "configs": [
+      "tag-compliance.yaml"
+    ],
+    "policy_filters": [],
+    "resource_types": [],
+    "verbose": null,
+    "quiet": null,
+    "debug": false,
+    "skip_validation": false,
+    "command": "c7n.commands.run",
+    "vars": null
+  },
+  "sys-stats": {},
+  "api-stats": {
+    "s3.ListBuckets": 1,
+    "s3.GetBucketLocation": 1,
+    "s3.GetBucketTagging": 1,
+    "s3.GetBucketPolicy": 1,
+    "s3.GetBucketAcl": 1,
+    "s3.GetBucketReplication": 1,
+    "s3.GetBucketVersioning": 1,
+    "s3.GetBucketWebsite": 1,
+    "s3.GetBucketLogging": 1,
+    "s3.GetBucketNotificationConfiguration": 1,
+    "s3.GetBucketLifecycleConfiguration": 1
+  },
+  "metrics": [
+    {
+      "MetricName": "ResourceCount",
+      "Timestamp": "2024-12-04T16:25:29.533580",
+      "Value": 0,
+      "Unit": "Count"
+    },
+    {
+      "MetricName": "ResourceTime",
+      "Timestamp": "2024-12-04T16:25:29.533600",
+      "Value": 6.285817384719849,
+      "Unit": "Seconds"
+    }
+  ]
+}

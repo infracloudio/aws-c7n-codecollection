@@ -1,0 +1,95 @@
+{
+  "policy": {
+    "name": "s3-tag-compliance",
+    "resource": "s3",
+    "filters": [
+      {
+        "or": [
+          {
+            "tag:Name": "absent"
+          },
+          {
+            "tag:Environment": "absent"
+          },
+          {
+            "tag:Owner": "absent"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "0.9.41",
+  "execution": {
+    "id": "9800ce8e-4f10-40d4-8137-c82bb9aad095",
+    "start": 1733314681.9208124,
+    "end_time": 1733314688.152467,
+    "duration": 6.231654644012451
+  },
+  "config": {
+    "region": "us-west-2",
+    "regions": [
+      "us-west-2"
+    ],
+    "cache": "~/.cache/cloud-custodian.cache",
+    "profile": null,
+    "account_id": "971422712704",
+    "assume_role": null,
+    "session_policy": null,
+    "external_id": null,
+    "log_group": null,
+    "tracer": null,
+    "metrics_enabled": null,
+    "metrics": null,
+    "output_dir": "/home/saurabh/Desktop/Workspace/runwhen/aws-c7n-codecollection/codebundles/aws-c7n-compliance/custodian-output",
+    "cache_period": 0,
+    "dryrun": false,
+    "authorization_file": null,
+    "subparser": "run",
+    "config": null,
+    "configs": [
+      "tag-compliance.yaml"
+    ],
+    "policy_filters": [],
+    "resource_types": [],
+    "verbose": null,
+    "quiet": null,
+    "debug": false,
+    "skip_validation": false,
+    "command": "c7n.commands.run",
+    "vars": null
+  },
+  "sys-stats": {},
+  "api-stats": {
+    "s3.ListBuckets": 1,
+    "s3.GetBucketLocation": 1,
+    "s3.GetBucketTagging": 1,
+    "s3.GetBucketPolicy": 1,
+    "s3.GetBucketAcl": 1,
+    "s3.GetBucketReplication": 1,
+    "s3.GetBucketVersioning": 1,
+    "s3.GetBucketWebsite": 1,
+    "s3.GetBucketLogging": 1,
+    "s3.GetBucketNotificationConfiguration": 1,
+    "s3.GetBucketLifecycleConfiguration": 1
+  },
+  "metrics": [
+    {
+      "MetricName": "ResourceCount",
+      "Timestamp": "2024-12-04T17:48:08.151818",
+      "Value": 1,
+      "Unit": "Count"
+    },
+    {
+      "MetricName": "ResourceTime",
+      "Timestamp": "2024-12-04T17:48:08.151836",
+      "Value": 6.2302985191345215,
+      "Unit": "Seconds"
+    },
+    {
+      "MetricName": "ActionTime",
+      "Timestamp": "2024-12-04T17:48:08.152421",
+      "Value": 6.198883056640625e-06,
+      "Unit": "Seconds"
+    }
+  ]
+}

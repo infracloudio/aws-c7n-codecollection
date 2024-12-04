@@ -1,0 +1,45 @@
+[
+  {
+    "Name": "8d9s9dj2e2",
+    "CreationDate": "2024-12-04T10:51:56+00:00",
+    "Location": {
+      "LocationConstraint": "us-west-2"
+    },
+    "Tags": [
+      {
+        "Key": "Environment",
+        "Value": "stage"
+      },
+      {
+        "Key": "Owner",
+        "Value": "dwdw"
+      }
+    ],
+    "Policy": null,
+    "Acl": {
+      "Owner": {
+        "DisplayName": "security+runwhen-poc",
+        "ID": "9d4eb162f347cb3d6da6a2a2b9db9ce29dc96abddb3a8f7f10a6da4d53a2590d"
+      },
+      "Grants": [
+        {
+          "Grantee": {
+            "DisplayName": "security+runwhen-poc",
+            "ID": "9d4eb162f347cb3d6da6a2a2b9db9ce29dc96abddb3a8f7f10a6da4d53a2590d",
+            "Type": "CanonicalUser"
+          },
+          "Permission": "FULL_CONTROL"
+        }
+      ]
+    },
+    "Replication": null,
+    "Versioning": {},
+    "Website": null,
+    "Logging": {},
+    "Notification": {},
+    "Lifecycle": null,
+    "c7n:MatchedFilters": [
+      "tag:Name"
+    ]
+  }
+]

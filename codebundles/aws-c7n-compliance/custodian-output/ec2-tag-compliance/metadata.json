@@ -1,0 +1,79 @@
+{
+  "policy": {
+    "name": "ec2-tag-compliance",
+    "resource": "ec2",
+    "filters": [
+      {
+        "or": [
+          {
+            "tag:Name": "absent"
+          },
+          {
+            "tag:Environment": "absent"
+          },
+          {
+            "tag:Owner": "absent"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "0.9.41",
+  "execution": {
+    "id": "2851925d-c111-4b1d-b42b-f98a5c8a9ec6",
+    "start": 1733314680.161493,
+    "end_time": 1733314681.9197793,
+    "duration": 1.7582862377166748
+  },
+  "config": {
+    "region": "us-west-2",
+    "regions": [
+      "us-west-2"
+    ],
+    "cache": "~/.cache/cloud-custodian.cache",
+    "profile": null,
+    "account_id": "971422712704",
+    "assume_role": null,
+    "session_policy": null,
+    "external_id": null,
+    "log_group": null,
+    "tracer": null,
+    "metrics_enabled": null,
+    "metrics": null,
+    "output_dir": "/home/saurabh/Desktop/Workspace/runwhen/aws-c7n-codecollection/codebundles/aws-c7n-compliance/custodian-output",
+    "cache_period": 0,
+    "dryrun": false,
+    "authorization_file": null,
+    "subparser": "run",
+    "config": null,
+    "configs": [
+      "tag-compliance.yaml"
+    ],
+    "policy_filters": [],
+    "resource_types": [],
+    "verbose": null,
+    "quiet": null,
+    "debug": false,
+    "skip_validation": false,
+    "command": "c7n.commands.run",
+    "vars": null
+  },
+  "sys-stats": {},
+  "api-stats": {
+    "ec2.DescribeInstances": 1
+  },
+  "metrics": [
+    {
+      "MetricName": "ResourceCount",
+      "Timestamp": "2024-12-04T17:48:01.919318",
+      "Value": 0,
+      "Unit": "Count"
+    },
+    {
+      "MetricName": "ResourceTime",
+      "Timestamp": "2024-12-04T17:48:01.919341",
+      "Value": 1.7515859603881836,
+      "Unit": "Seconds"
+    }
+  ]
+}
