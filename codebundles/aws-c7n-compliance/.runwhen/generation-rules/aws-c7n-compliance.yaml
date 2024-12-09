@@ -19,7 +19,7 @@ spec:
           mode: substring
       slxs:
         - baseName: aws-c7n-compliance
-          qualifiers: ["account_id", "region"]
+          qualifiers: ["account_id", "region", "resource"]
           baseTemplateName: aws-c7n-compliance
           levelOfDetail: basic
           outputItems:
