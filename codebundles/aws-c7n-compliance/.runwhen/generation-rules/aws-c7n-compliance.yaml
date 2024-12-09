@@ -1,0 +1,29 @@
+apiVersion: runwhen.com/v1
+kind: GenerationRules
+spec:
+  platform: aws
+  generationRules:
+    - resourceTypes:
+        - aws_ec2_instances
+        - aws_ec2_vpcs
+        - aws_iam_roles
+        - aws_iam_policies
+        - aws_iam_users
+        - aws_iam_groups
+        - aws_s3_buckets
+        - aws_rds_instances
+      matchRules:
+        - type: pattern
+          pattern: ".+"
+          properties: [name]
+          mode: substring
+      slxs:
+        - baseName: aws-c7n-compliance
+          qualifiers: ["account_id", "region", "resource"]
+          baseTemplateName: aws-c7n-compliance
+          levelOfDetail: basic
+          outputItems:
+            - type: slx
+            - type: sli
+            - type: runbook
+              templateName: aws-c7n-compliance-taskset.yaml
