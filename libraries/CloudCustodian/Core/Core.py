@@ -1,8 +1,9 @@
 import os
 import json
+import yaml
 from pathlib import Path
 from tabulate import tabulate
-
+from jinja2 import Environment, FileSystemLoader
 
 def parse_resource_type_from_arn(arn):
     """
@@ -211,8 +212,15 @@ def parse_ebs_results(input_dir: str):
                             elif "SnapshotId" in resource:
                                 resource_type = "EBS snapshot"
                                 resource_id = resource.get("SnapshotId", "Unknown ID")
+                            elif "InstanceId" in resource:
+                                resource_type = "EC2 Instance"
+                                resource_id = resource.get("InstanceId", "Unknown ID")
                             
-                            resource_location = resource.get("AvailabilityZone", "Unknown Location")[:-1]
+                            # This might not work because some resources have ['OwnerId', 'VpcId', 'DhcpOptionsId']
+                            Id = [id for id in resource.keys() if "id" in id.lower()]
+                            resource_id = resource.get(Id, "Unknown ID")
+                            # It's better to pass region as parameter.
+                            resource_location = find_value_recursive(resource, 'AvailabilityZone')[0][:-1]
                             tags = resource.get("Tags", [])
                             if isinstance(tags, list):
                                 tags_str = ", ".join(f"{tag.get('Key', 'Unknown')}={tag.get('Value', 'Unknown')}" for tag in tags)
@@ -265,7 +273,9 @@ def parse_ebs_results(input_dir: str):
                         log_summary.append([subdir.name, error_count, warning_count])
                 except Exception as e:
                     print(f"Error reading custodian-run.log in {subdir}: {e}")
-
+        else:
+            print(f"{subdir} is not a directory")
+            exit
 
     results = []
 
@@ -287,3 +297,60 @@ def parse_ebs_results(input_dir: str):
         return "No valid results found in the specified directory."
 
     return "\n".join(results)
+
+def find_value_recursive(obj, target_key):
+    """
+    Recursively search for a key in a nested dictionary or list.
+    Returns all matching values found.
+    """
+    results = []
+    
+    if isinstance(obj, dict):
+        for key, value in obj.items():
+            if key == target_key:
+                results.append(value)
+            
+            # Recursively search nested dictionaries and lists
+            if isinstance(value, (dict, list)):
+                results.extend(find_value_recursive(value, target_key))
+    
+    elif isinstance(obj, list):
+        for item in obj:
+            if isinstance(item, (dict, list)):
+                results.extend(find_value_recursive(item, target_key))
+    
+    return results
+
+def generate_policy(template_path, **kargs):
+
+    if not os.path.isfile(template_path):
+        raise FileNotFoundError(f"Template file not found: {template_path}")
+        exit
+
+    template_dir    = os.path.dirname(template_path)
+    template_file   = os.path.split(template_path)[-1]
+    jinja_env       = Environment(loader=FileSystemLoader(template_dir))
+
+    if "tags" in kargs and kargs["tags"] != "" :
+        kargs["tags"] = kargs["tags"].replace(" ","").split(",")
+    else:
+        kargs["tags"] = []
+
+    if "resource_providers" in kargs and kargs["resource_providers"] != "" :
+        kargs["resource_providers"] = kargs["resource_providers"].replace(" ","").split(",")
+    else:
+        kargs["resource_providers"] = []
+
+    try:
+        template = jinja_env.get_template(template_file)
+    except Exception as e:
+        print(f"Error loading template: {e}")
+
+    try:
+        rendered_policy = template.render(kargs)
+        policy_file_path = os.path.join(template_dir, f'{template_file.split(".")[0]}.yaml')
+
+        with open(policy_file_path, 'w') as output_file:
+            output_file.write(rendered_policy)
+    except Exception as e:
+        print(f"Error rendering template: {e}")
