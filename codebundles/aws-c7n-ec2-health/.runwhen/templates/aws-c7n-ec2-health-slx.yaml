@@ -7,7 +7,7 @@ metadata:
   annotations:
     {% include "common-annotations.yaml" %}
 spec:
-  imageURL: https://logowik.com/content/uploads/images/aws-ec24128.jpg
+  imageURL: https://PLACEHOLDER
   alias: AWS EC2 Health For Region {{match_resource.resource.region}}
   asMeasuredBy: The number of old EC2 instances in region {{match_resource.resource.region}}
   configProvided:
