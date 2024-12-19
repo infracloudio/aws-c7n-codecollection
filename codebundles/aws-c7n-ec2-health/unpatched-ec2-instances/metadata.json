@@ -1,0 +1,81 @@
+{
+  "policy": {
+    "name": "unpatched-ec2-instances",
+    "resource": "ec2",
+    "comment": "Report running instances older than 0.00139 days\n",
+    "filters": [
+      {
+        "State.Name": "running"
+      },
+      {
+        "type": "instance-age",
+        "op": "gt",
+        "days": 0.00139
+      }
+    ]
+  },
+  "version": "0.9.42",
+  "execution": {
+    "id": "e6146224-ddf4-4f13-a961-36955e499664",
+    "start": 1734614113.871247,
+    "end_time": 1734614115.7713242,
+    "duration": 1.9000771045684814
+  },
+  "config": {
+    "region": "us-west-2",
+    "regions": [
+      "us-west-2"
+    ],
+    "cache": "~/.cache/cloud-custodian.cache",
+    "profile": null,
+    "account_id": "971422712704",
+    "assume_role": null,
+    "session_policy": null,
+    "external_id": null,
+    "log_group": null,
+    "tracer": null,
+    "metrics_enabled": null,
+    "metrics": null,
+    "output_dir": "/home/runwhen/codecollection/codebundles/aws-c7n-ec2-health",
+    "cache_period": 0,
+    "dryrun": false,
+    "authorization_file": null,
+    "subparser": "run",
+    "config": null,
+    "configs": [
+      "unpatched-ec2-instances.yaml"
+    ],
+    "policy_filters": [],
+    "resource_types": [],
+    "verbose": null,
+    "quiet": null,
+    "debug": false,
+    "skip_validation": false,
+    "command": "c7n.commands.run",
+    "vars": null
+  },
+  "sys-stats": {},
+  "api-stats": {
+    "ec2.DescribeInstances": 1
+  },
+  "metrics": [
+    {
+      "MetricName": "ResourceCount",
+      "Timestamp": "2024-12-19T13:15:15.770326",
+      "Value": 1,
+      "Unit": "Count"
+    },
+    {
+      "MetricName": "ResourceTime",
+      "Timestamp": "2024-12-19T13:15:15.770349",
+      "Value": 1.8867526054382324,
+      "Unit": "Seconds"
+    },
+    {
+      "MetricName": "ActionTime",
+      "Timestamp": "2024-12-19T13:15:15.771304",
+      "Value": 7.867813110351562e-06,
+      "Unit": "Seconds"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+policies:
+  - name: unused-ec2-instances
+    resource: ec2
+    comment: |
+      Report unused instances older than 0.00139 days
+    filters:
+      - "State.Name": stopped
+      - type: instance-age
+        op: gt
+        days: 0.00139
