@@ -4,19 +4,19 @@ spec:
   platform: aws
   generationRules:
     - resourceTypes:
-        - aws_ec2_vpcs
+        - aws_elbv2_load_balancers
       matchRules:
         - type: pattern
           pattern: ".+"
           properties: [name]
           mode: substring
       slxs:
-        - baseName: aws-c7n-ebs-health
+        - baseName: aws-c7n-vpc-health
           qualifiers: ["account_id", "region"]
-          baseTemplateName: aws-c7n-ebs-health
+          baseTemplateName: aws-c7n-vpc-health
           levelOfDetail: basic
           outputItems:
             - type: slx
             - type: sli
             - type: runbook
-              templateName: aws-c7n-ebs-health-taskset.yaml
+              templateName: aws-c7n-vpc-health-taskset.yaml
